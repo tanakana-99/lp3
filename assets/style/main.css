@@ -9,12 +9,13 @@ body {
     color: #000;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
 a {
-    color: #FFF;
+    color: #333;
     text-decoration: none;
 }
 
@@ -31,6 +32,7 @@ img {
 li {
     list-style: none;
 }
+
 
 /* 部品
 ------------------------------------------ */
