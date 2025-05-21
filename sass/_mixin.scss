@@ -1,0 +1,10 @@
+
+@use 'variables' as v;
+
+@mixin mq($breakpoint) {
+  @media #{map-get(v.$breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+

@@ -1,69 +1,306 @@
-@charset "UTF-8";
-
-/* ページ全体のスタイル
------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Outfit&display=swap");
 body {
-    overflow-x: hidden;
-    font-family: 'Noto Serif JP', sans-serif;
-    line-height: 1.75;
-    color: #000;
-}
-
-
-html {
-    scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  color: #000;
 }
 
 a {
-    color: #333;
-    text-decoration: none;
+  text-decoration: none;
 }
-
 a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
-
-/* 部品
------------------------------------------- */
 .container {
-    width: 100%;
-    padding: 0 4.1%;
+  padding: 0 4.871% 0 5.384%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1030px;
     margin: 0 auto;
+  }
+  .container-narrow {
+    width: 100%;
+    max-width: 570px;
+    margin: 0 auto;
+  }
+  .container-wide {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+.header__inner {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+.header__actions {
+  display: flex;
+  align-items: center;
+  max-width: 290px;
+  gap: 10px;
+  justify-content: flex-end;
+  max-width: 1030px;
+}
+.header__btn {
+  font-size: 12px;
+  border-radius: 15.5px;
+  color: #fff;
+  font-size: 12px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+@media screen and (min-width: 768px) {
+  .header__btn {
+    font-size: 21.12px;
+    border-radius: 25.18px;
+    font-size: 21.12px;
+  }
+}
+.header__btn--contact {
+  background-color: #fa7da3;
+  width: 36.896%;
+  padding: 10px 21px;
+}
+@media screen and (min-width: 768px) {
+  .header__btn--contact {
+    width: 100%;
+  }
+}
+.header__btn--contact .bi-chevron-right {
+  margin-left: 7px;
+}
+.header__btn--reserve {
+  background-color: #49c43d;
+  width: 59.655%;
+  padding: 10px 21px;
+}
+@media screen and (min-width: 768px) {
+  .header__btn--reserve {
+    width: 100%;
+  }
+}
+.header__btn .bi-chevron-right {
+  margin-left: 8px;
 }
 
-@media (min-width: 768px) {
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+.btn__free {
+  font-size: 10px;
 }
 
-@media (min-width: 768px) {
-    .container-narrow {
-        width: 100%;
-        max-width: 980px;
-        margin: 0 auto;
-    }
+.mv__img {
+  position: relative;
+}
+.mv img {
+  width: 100%;
+  display: block;
+  height: 318px;
+}
+@media screen and (min-width: 768px) {
+  .mv img {
+    height: 612px;
+  }
+}
+.mv__inner {
+  color: #fff;
+  position: absolute;
+  top: 5%;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .mv__inner {
+    top: 5%;
+    left: 15%;
+  }
+}
+.mv__first {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .mv__first {
+    text-align: right;
+  }
+}
+.mv__first-left {
+  flex: 1;
+}
+@media screen and (min-width: 768px) {
+  .mv__first-left {
+    flex: none;
+  }
+}
+.mv__first-right {
+  flex: 1;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgba(225, 225, 225, 0.3);
+}
+@media screen and (min-width: 768px) {
+  .mv__first-right {
+    width: 423px;
+    flex: none;
+    align-items: center;
+  }
+}
+.mv__title {
+  font-size: 42px;
+}
+@media screen and (min-width: 768px) {
+  .mv__title {
+    font-size: 122.15px;
+    font-weight: 400;
+  }
+}
+.mv__sub {
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .mv__sub {
+    font-size: 36px;
+  }
+}
+.mv__second {
+  text-align: right;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .mv__second {
+    font-size: 26.48px;
+  }
+}
+.mv__third-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-end;
+}
+.mv__third-item {
+  border: solid 1px #fff;
+  width: 38%;
+  text-align: center;
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .mv__third-item {
+    font-size: 28px;
+  }
 }
 
-@media (min-width: 768px) {
-    .container-wide {
-        width: 100%;
-        max-width: 1500px;
-        margin: 0 auto;
-    }
+.now {
+  font-size: 13px;
+  color: #fa7da3;
+  background-color: #fff;
+  display: inline;
+  position: absolute;
+  top: 13%;
+}
+@media screen and (min-width: 768px) {
+  .now {
+    font-size: 29.25px;
+    top: 20%;
+    right: 30%;
+  }
 }
 
-/* ヘッダー
------------------------------------------- */
+.first-month {
+  font-size: 24px;
+  display: inline;
+}
+@media screen and (min-width: 768px) {
+  .first-month {
+    font-size: 54px;
+  }
+}
+
+.free-0 {
+  font-size: 76px;
+  color: #fffd7a;
+}
+@media screen and (min-width: 768px) {
+  .free-0 {
+    font-size: 171px;
+  }
+}
+.free-0-yen {
+  font-size: 36px;
+  color: #fffd7a;
+}
+@media screen and (min-width: 768px) {
+  .free-0-yen {
+    font-size: 81px;
+  }
+}
+
+.month {
+  font-size: 9px;
+}
+@media screen and (min-width: 768px) {
+  .month {
+    font-size: 17.02px;
+  }
+}
+
+.campaign {
+  background-color: #fffedd;
+  color: #fa7da3;
+  text-align: center;
+  padding: 0 4.871% 0 5.384%;
+}
+.campaign__highlight {
+  font-size: 21px;
+}
+.campaign__box {
+  border: solid 1px #fa7da3;
+  border-radius: 10px;
+}
+.campaign__title {
+  font-size: 21px;
+  height: 32px;
+  background-color: #fa7da3;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.campaign__title-02 {
+  font-size: 21px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  height: 63px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  padding-top: 9px;
+}
+.campaign__strong {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1;
+}
+.campaign__note {
+  color: #333;
+  font-size: 10px;
+}

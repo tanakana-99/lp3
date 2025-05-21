@@ -1,0 +1,82 @@
+// 変数定義
+
+//-----------------------------------
+//Font
+//------------------------------------
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Outfit&display=swap");
+
+
+// Font Family
+$f-main: 'Noto Sans JP', sans-serif;
+
+
+//-----------------------------------
+//Color
+//-----------------------------------
+$c-white: #fff;
+$c-black: #333;
+$c-blue: #50bfff;
+$c-cream: #fffedd;
+$c-yellow: #fffd7a;
+$c-green: #49c43d;
+$c-pink: #fa7da3;
+$c-lightpink: #fdf0f5;
+
+//base
+$c-main: #fff;
+$c-sub: #333;
+
+//button
+$c-btn-bg: $c-green;
+
+//title
+$c--title: #fff;
+
+
+//-----------------------------------
+//Break Point
+//-----------------------------------
+$breakpoints: (
+    sp: 'screen and (max-width: 767px)',
+    pc: 'screen and (min-width: 768px)',
+);
+
+
+//-----------------------------------
+//Base Width
+//-----------------------------------
+$base-width-sp: 390px;
+$base-width-pc: 1440px;
+
+//-----------------------------------
+//Contents Width
+//-----------------------------------
+$width-main: 1030px;
+$width-wide: 1440px;
+$width-narrow: 570px;
+
+
+//-----------------------------------
+//font
+//-----------------------------------
+
+$font-sp: 14px;
+$font-pc: 18px;
+$point-font-pc: 21px;
+
+$btn-head-font-sp: 12px;
+$btn-head-font-pc: 21.12px;
+
+$btn-res-font-sp: 21px;
+$btn-res-font-pc: 34px;
+
+//-----------------------------------
+//border-radius
+//-----------------------------------
+
+$btn-head-radius-sp: 15.5px;
+$btn-head-radius-pc: 25.18px;
+
+$btn-res-radius-sp: 40px;
+$btn-res-radius-pc: 65.05px;

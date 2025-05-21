@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+// ページ全体のスタイル
+body {
+  overflow-x: hidden;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.75;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+// 部品
+.container {
+  padding: 0 4.871% 0 5.384%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1030px;
+    margin: 0 auto;
+  }
+
+  .container-narrow {
+    width: 100%;
+    max-width: 570px;
+    margin: 0 auto;
+  }
+
+  .container-wide {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+// ヘッダー

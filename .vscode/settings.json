@@ -1,0 +1,14 @@
+{
+  "liveSassCompile.settings.formats": [{
+    "format": "expanded",
+    "extensionName": ".css",
+    "savePath": "assets/style",
+    "sourceMap": false
+  }],
+  "liveSassCompile.settings.rootIsWorkspace": true,
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.autoprefix": [],
+  "liveSassCompile.settings.includeItems": [
+    "sass/main.scss"
+  ]
+}

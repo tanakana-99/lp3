@@ -1,0 +1,284 @@
+// main.scss
+
+@use 'variables' as v;
+@use 'layout' as *;
+@use 'mixin' as m;
+
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        max-width: 290px;
+        gap: 10px;
+        justify-content: flex-end;
+        max-width: 1030px;
+    }
+
+    &__btn {
+        font-size: v.$btn-head-font-sp;
+        border-radius: v.$btn-head-radius-sp;
+        color: v.$c-white;
+        font-size: v.$btn-head-font-sp;
+        height: 31px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+
+        @include m.mq(pc) {
+            font-size: v.$btn-head-font-pc;
+            border-radius: v.$btn-head-radius-pc;
+            font-size: v.$btn-head-font-pc;
+        }
+
+
+        &--contact {
+            background-color: v.$c-pink;
+            width: 36.896%;
+            padding: 10px 21px;
+
+            @include m.mq(pc) {
+                width: 100%;
+            }
+
+            .bi-chevron-right {
+                margin-left: 7px;
+            }
+        }
+
+        &--reserve {
+            background-color: v.$c-green;
+            width: 59.655%;
+            padding: 10px 21px;
+
+            @include m.mq(pc) {
+                width: 100%;
+            }
+        }
+
+        .bi-chevron-right {
+            margin-left: 8px;
+        }
+    }
+}
+
+
+.btn__free {
+    font-size: 10px;
+}
+
+.mv {
+    &__img {
+        position: relative;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+        height: 318px;
+
+        @include m.mq(pc) {
+            height: 612px;
+        }
+    }
+
+    &__inner {
+        color: v.$c-white;
+        position: absolute;
+        top: 5%;
+        width: 100%;
+
+        @include m.mq(pc) {
+            top: 5%;
+            left: 15%;
+        }
+    }
+
+    &__first {
+        display: flex;
+        justify-content: center;
+
+        @include m.mq(pc) {
+            text-align: right;
+        }
+
+        &-left {
+            flex: 1;
+
+            @include m.mq(pc) {
+                flex: none;
+            }
+        }
+
+        &-right {
+            flex: 1;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: rgba(225, 225, 225, 0.3);
+
+            @include m.mq(pc) {
+                width: 423px;
+                flex: none;
+                align-items: center;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 42px;
+
+        @include m.mq(pc) {
+            font-size: 122.15px;
+            font-weight: 400;
+        }
+    }
+
+    &__sub {
+        font-size: 18px;
+
+        @include m.mq(pc) {
+            font-size: 36px;
+        }
+    }
+
+
+
+    &__second {
+        text-align: right;
+        font-family: 'Outfit', sans-serif;
+        font-size: v.$font-sp;
+
+        @include m.mq(pc) {
+            font-size: 26.48px;
+        }
+    }
+
+    &__third {
+        &-list {
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
+            align-items: flex-end;
+        }
+
+        &-item {
+            border: solid 1px v.$c-white;
+            width: 38%;
+            text-align: center;
+            font-size: 18px;
+
+            @include m.mq(pc) {
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+
+
+.now {
+    font-size: 13px;
+    color: v.$c-pink;
+    background-color: v.$c-white;
+    display: inline;
+    position: absolute;
+    top: 13%;
+
+    @include m.mq(pc) {
+        font-size: 29.25px;
+        top: 20%;
+        right: 30%;
+    }
+}
+
+.first-month {
+    font-size: 24px;
+    display: inline;
+
+    @include m.mq(pc) {
+        font-size: 54px;
+    }
+}
+
+.free-0 {
+    font-size: 76px;
+    color: v.$c-yellow;
+
+    @include m.mq(pc) {
+        font-size: 171px;
+    }
+
+    &-yen {
+        font-size: 36px;
+        color: v.$c-yellow;
+
+        @include m.mq(pc) {
+            font-size: 81px;
+        }
+    }
+}
+
+.month {
+    font-size: 9px;
+
+    @include m.mq(pc) {
+        font-size: 17.02px;
+    }
+}
+
+.campaign {
+    background-color: v.$c-cream;
+    color: v.$c-pink;
+    text-align: center;
+    padding: 0 4.871% 0 5.384%;
+
+    &__highlight {
+        font-size: 21px;
+    }
+
+    &__box {
+        border: solid 1px v.$c-pink;
+        border-radius: 10px;
+    }
+
+    &__title {
+        font-size: 21px;
+        height: 32px;
+        background-color: v.$c-pink;
+        color: v.$c-white;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title-02 {
+        font-size: 21px;
+        background-color: v.$c-white;
+        border-radius: 0 0 10px 10px;
+        height: 63px;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        padding-top: 9px;
+    }
+
+    &__strong {
+        font-size: 42px;
+        font-weight: 600;
+        line-height: 1;
+    }
+
+    &__note {
+        color: v.$c-black;
+        font-size: 10px;
+    }
+}
