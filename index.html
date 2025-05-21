@@ -34,56 +34,61 @@
 
 
   <body>
-    <header class="header">
-      <div class="header__logo">
-        <a href="/">
-          <picture>
-            <source class="header_logo_sp" media="(max-width: 767px)" srcset="./assets/image/mv_header_logo_sp_01.png">
-            <img class="header_logo_pc" src="./assets/image/mv_header_logo_pc_01.png" alt="KIRAMEKI BEAUTY LABO">
-          </picture>
-        </a>
-      </div>
-      <div class="header__actions">
-        <a href="/contact/" class="header__btn header__btn--contact">お問い合わせ</a>
-        <a href="/reservation/" class="header__btn header__btn--reserve">カウンセリング予約</a>
+    <header class="header container-wide">
+      <div class="header__inner container">
+        <div class="header__logo">
+          <a href="/">
+            <picture>
+              <source class="header_logo_sp" media="(max-width: 767px)" srcset="./assets/image/mv_header_logo_sp_01.png">
+              <img class="header_logo_pc" src="./assets/image/mv_header_logo_pc_01.png" alt="KIRAMEKI BEAUTY LABO">
+            </picture>
+          </a>
+        </div>
+        <div class="header__actions">
+          <a href="/contact/" class="header__btn header__btn--contact">お問い合わせ<i class="bi bi-chevron-right"></i></a>
+          <a href="/reservation/" class="header__btn header__btn--reserve">カウンセリング予約<span class="btn__free">(無料)</span><i class="bi bi-chevron-right"></i></a>
+        </div>
       </div>
     </header>
     <main>
-      <section class="mv">
+      <section class="mv container-wide">
         <div class="mv__img">
           <picture>
             <source class="mv_sp" media="(max-width: 767px)" srcset="./assets/image/mv_woman_sp_01.jpg">
             <img class="mv_pc" src="./assets/image/mv_woman_pc_01.jpg" alt="">
           </picture>
         </div>
-        <div class="mv__inner">
-          <div class="mv__inner__first">
-            <div class="mv__inner__first--left">
+        <div class="mv__inner container">
+          <div class="mv__first">
+            <div class="mv__first-left">
               <h1 class="mv__title">全身脱毛</h1>
-              <p class="mv__title__sub">（顔・VIO込）</p>
+              <p class="mv__title-sub">（顔・VIO込）</p>
             </div>
-            <div class="mv__inner__first--right">
-              <p>今だけ</p>
-              <p>初月0円</p>
+            <div class="mv__first-right">
+              <p class="now">今だけ</p>
+              <p class="first-month">初月<span class="free-0">0</span><span class="free-0-yen">円</span></p>
             </div>
           </div>
-          <div class="mv__inner__second">
-            <p>2,480円／月</p>
+          <div class="mv__second">
+            <p>2,480<span class="month">円／月</span></p>
           </div>
-          <div class="mv__inner__third">
-            <ul>
-              <li>通い放題</li>
-              <li>追加料金なし</li>
-              <li>安心サポート</li>
+          <div class="mv__third">
+            <ul class="mv__third-list">
+              <li class="mv__third-item">通い放題</li>
+              <li class="mv__third-item">追加料金なし</li>
+              <li class="mv__third-item">安心サポート</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <div class="campaign">
-        <p class="campaign__highlight">今だけ</p>
-        <p class="campaign__title">フェイシャルコース<span class="campaign__strong">3回プレゼント</span></p>
-        <p class="campaign__note">クレンジング/洗顔/フェイスヒーリング/ 整肌</p>
+      <div class="campaign container-wide">
+        <p class="campaign__highlight">今だけ！</p>
+        <div class="campaign__box">
+          <p class="campaign__title">フェイシャルコース</p>
+          <p class="campaign__title-02"><span class="campaign__strong">3</span>回プレゼント！</p>
+        </div>
+          <p class="campaign__note">クレンジング/洗顔/フェイスヒーリング/ 整肌</p>
       </div>
 
       <div class="trial trial-01">
@@ -95,7 +100,7 @@
         <p class="trial__item">〈美顔体験〉フェイシャルトリートメント(40分コース1回)</p>
       </div>
 
-      <section class="point">
+      <section class="point container-wide">
         <div class="point__title">
           <picture>
             <source class="pointlogo_sp" media="(max-width: 767px)" srcset="./assets/image/index_point_title_sp_01.png">
@@ -115,7 +120,7 @@
           </h2>
         </div>
 
-        <div class="point piont--1">
+        <div class="point point--1">
           <div class="point_inner">
             <h3>POINT1 ｜ 通い放題</h3>
             <p class="point__description">納得いくまで何度でも、追加料金なく安心して通っていただけます。</p>
@@ -133,7 +138,7 @@
           <p>来店3回で全身1回</p>
         </div>
 
-        <div class="point piont--2">
+        <div class="point point--2">
           <div class="plan_inner">
             <h3>POINT2 ｜ プランが選べる</h3>
             <p class="point__description">「全身プラン」と、施術部位を選べる「部分脱毛プラン」から自由にお選びいただけます。</p>
@@ -202,7 +207,7 @@
             <p>フェイスライン</p>
           </div>
         </div>
-        <div class="point piont--3">
+        <div class="point point--3">
           <div class="plan_inner">
             <h3>POINT3 ｜ 安心のサポート</h3>
             <p class="point__description">提携医療機関のサポートがありますので、ご安心ください。</p>
@@ -254,7 +259,7 @@
 
       </section>
 
-      <section class="voices">
+      <section class="voices container-wide">
         <h2 class="voices_title">
           <picture>
             <source class="point_star_sp" media="(max-width: 767px)" srcset="./assets/image/index_point_star_left_sp_01.png">
@@ -319,7 +324,7 @@
       </div>
 
     </main>
-    <footer class="footer">
+    <footer class="footer container-wide">
       <div class="header__logo">
         <a href="/">
           <picture>
