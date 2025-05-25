@@ -5,6 +5,14 @@
 @use 'mixin' as m;
 
 .header {
+
+    height: 60px;
+
+    &__logo {
+        margin-top: 11px;
+        margin-left: 2%;
+    }
+
     &__inner {
         display: flex;
         justify-content: space-around;
@@ -15,9 +23,10 @@
         display: flex;
         align-items: center;
         max-width: 290px;
-        gap: 10px;
+        gap: 5%;
         justify-content: flex-end;
         max-width: 1030px;
+        margin-top: 10px;
     }
 
     &__btn {
@@ -27,7 +36,7 @@
         font-size: v.$btn-head-font-sp;
         height: 31px;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
         white-space: nowrap;
 
@@ -40,8 +49,8 @@
 
         &--contact {
             background-color: v.$c-pink;
-            width: 36.896%;
-            padding: 10px 21px;
+            width: 37.896%;
+            padding: 6px 5px;
 
             @include m.mq(pc) {
                 width: 100%;
@@ -54,8 +63,8 @@
 
         &--reserve {
             background-color: v.$c-green;
-            width: 59.655%;
-            padding: 10px 21px;
+            width: 61.655%;
+            padding: 8px 14px;
 
             @include m.mq(pc) {
                 width: 100%;
@@ -76,161 +85,186 @@
 .mv {
     &__img {
         position: relative;
-    }
-
-    img {
-        width: 100%;
-        display: block;
-        height: 318px;
+        aspect-ratio: 40 / 32; // 比率を維持
+        overflow: hidden;
 
         @include m.mq(pc) {
-            height: 612px;
+            aspect-ratio: 120 / 51; // PC用
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
     &__inner {
-        color: v.$c-white;
         position: absolute;
-        top: 5%;
+        top: 0;
+        left: 0;
         width: 100%;
+        height: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0 0 0 2.5%;
 
         @include m.mq(pc) {
-            top: 5%;
-            left: 15%;
+            padding: 0 15%;
         }
     }
 
     &__first {
         display: flex;
-        justify-content: center;
-
-        @include m.mq(pc) {
-            text-align: right;
-        }
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 2px;
 
         &-left {
             flex: 1;
-
-            @include m.mq(pc) {
-                flex: none;
-            }
+            min-width: 180px;
+            margin-top: 0.2%;
         }
 
         &-right {
             flex: 1;
+            min-width: 150px;
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 0;
+            text-align: center;
             font-weight: bold;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            background-color: rgba(225, 225, 225, 0.3);
+            position: relative;
+            max-width: 188px;
+            line-height: 1.4;
+            letter-spacing: 3.5px;
+            height: 107px;
 
             @include m.mq(pc) {
-                width: 423px;
-                flex: none;
-                align-items: center;
+                max-width: 423.02px;
             }
+
         }
     }
 
     &__title {
-        font-size: 42px;
+        font-size: 9vw;
+        letter-spacing: 6.1px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 1.4;
 
         @include m.mq(pc) {
-            font-size: 122.15px;
-            font-weight: 400;
+            font-size: 4vw;
         }
     }
 
-    &__sub {
-        font-size: 18px;
+    &__title-sub {
+        font-size: 4.5vw;
+        padding-left: 18.6%;
 
         @include m.mq(pc) {
-            font-size: 36px;
+            font-size: 1.5vw;
+            text-align: end;
         }
     }
-
-
 
     &__second {
         text-align: right;
+        font-size: 4vw;
         font-family: 'Outfit', sans-serif;
-        font-size: v.$font-sp;
+        margin-right: 7%;
 
         @include m.mq(pc) {
-            font-size: 26.48px;
+            font-size: 1.8vw;
         }
     }
 
     &__third {
+        margin-top: 5%;
+        margin-right: 7%;
+
         &-list {
             display: flex;
             flex-direction: column;
-            row-gap: 12px;
             align-items: flex-end;
+            row-gap: 13px;
+            text-align: center;
         }
 
         &-item {
-            border: solid 1px v.$c-white;
+            border: 1px solid white;
+            padding: 0.5em 0;
+            font-size: 4vw;
             width: 38%;
-            text-align: center;
-            font-size: 18px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 2.2px;
 
             @include m.mq(pc) {
-                font-size: 28px;
+                font-size: 1.5vw;
             }
         }
     }
 }
 
-
-
 .now {
-    font-size: 13px;
-    color: v.$c-pink;
-    background-color: v.$c-white;
-    display: inline;
+    font-size: 2.6vw;
+    font-weight: bold;
+    background-color: white;
+    color: pink;
+    display: inline-block;
+    padding: 0.3em 0;
+    margin-bottom: 0.5em;
     position: absolute;
-    top: 13%;
+    top: 24%;
+    left: 16%;
 
     @include m.mq(pc) {
-        font-size: 29.25px;
-        top: 20%;
-        right: 30%;
+        font-size: 1vw;
     }
 }
 
 .first-month {
-    font-size: 24px;
-    display: inline;
+    font-size: 6vw;
+    letter-spacing: 3.4px;
 
     @include m.mq(pc) {
-        font-size: 54px;
+        font-size: 2vw;
     }
 }
 
 .free-0 {
-    font-size: 76px;
-    color: v.$c-yellow;
+    font-size: 17.7vw;
+    color: yellow;
 
     @include m.mq(pc) {
-        font-size: 171px;
+        font-size: 5vw;
     }
 
     &-yen {
-        font-size: 36px;
-        color: v.$c-yellow;
+        font-size: 8.8vw;
+        color: yellow;
+        letter-spacing: -1.2px;
 
         @include m.mq(pc) {
-            font-size: 81px;
+            font-size: 2vw;
         }
     }
 }
 
 .month {
-    font-size: 9px;
+    font-size: 2vw;
 
     @include m.mq(pc) {
-        font-size: 17.02px;
+        font-size: 1vw;
     }
 }
 
@@ -238,20 +272,336 @@
     background-color: v.$c-cream;
     color: v.$c-pink;
     text-align: center;
-    padding: 0 4.871% 0 5.384%;
+    padding: 26px 4.871% 6px 5.384%;
 
-    &__highlight {
-        font-size: 21px;
+
+    @include m.mq(pc) {
+        padding-top: 50px;
+        padding-bottom: 26px;
     }
+
 
     &__box {
         border: solid 1px v.$c-pink;
         border-radius: 10px;
+        height: 98px;
+
+        @include m.mq(pc) {
+            margin-bottom: 21px;
+            height: 148px;
+        }
     }
 
     &__title {
-        font-size: 21px;
+        font-size: 21.2px;
         height: 32px;
+        background-color: v.$c-pink;
+        color: v.$c-white;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include m.mq(pc) {
+            font-size: 32px;
+            height: 47px;
+        }
+    }
+
+    &__title-02 {
+        font-size: 27px;
+        background-color: v.$c-white;
+        border-radius: 0 0 10px 10px;
+        height: 65px;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        padding-top: 6px;
+        letter-spacing: 0.3px;
+        margin-left: 2%;
+
+        @include m.mq(pc) {
+            font-size: 43.67px;
+            height: 98px;
+        }
+    }
+
+    &__strong {
+        font-size: 42px;
+        font-weight: 600;
+        line-height: 1;
+
+        @include m.mq(pc) {
+            font-size: 67.93px;
+        }
+    }
+
+    &__note {
+        color: v.$c-black;
+        font-size: 10px;
+
+        @include m.mq(pc) {
+            font-size: 14px;
+        }
+    }
+}
+
+.campaign__highlight {
+    position: relative;
+    font-size: 21px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    line-height: 1;
+    color: v.$c-pink;
+
+    @include m.mq(pc) {
+        margin-bottom: 35px;
+        font-size: 34px;
+        margin-top: 8px;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        width: 27px;
+        height: 2px;
+        background-color: v.$c-pink;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &::before {
+        left: 31%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    &::after {
+        right: 31%;
+        transform: translateY(-50%) rotate(-45deg);
+    }
+}
+
+
+
+
+.trial {
+    text-align: center;
+    font-size: 21px;
+
+    @include m.mq(pc) {
+        font-size: 34px;
+    }
+
+    &-01 {
+        margin-top: 20px;
+        margin-bottom: 32px;
+
+        @include m.mq(pc) {
+            margin-top: 63px;
+            margin-bottom: 46px;
+        }
+    }
+
+    &-02 {
+        margin-top: 31px;
+        margin-bottom: 43px;
+
+        @include m.mq(pc) {
+            margin-top: 62px;
+            margin-bottom: 62px;
+        }
+    }
+
+    &-03 {
+        margin-bottom: 42px;
+
+        @include m.mq(pc) {
+            margin-bottom: 65px;
+        }
+    }
+
+    &__highlight {
+        color: v.$c-pink;
+        font-weight: 600;
+        letter-spacing: 2.5px;
+        margin: 0 0 3px 3%;
+
+        @include m.mq(pc) {
+            margin-bottom: 21px;
+        }
+    }
+
+    &__box {
+        padding: 0 4.871% 0 5.384%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include m.mq(pc) {
+            height: 130.1px;
+            max-width: 570px;
+        }
+    }
+
+    &__box-bi {
+        width: 100%;
+    }
+
+    &__btn {
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        background-color: v.$c-green;
+        border-radius: 65.05px;
+        line-height: 1.3;
+        padding-left: 12%;
+        letter-spacing: 2px;
+
+        &-text01 {
+            padding-top: 12px;
+        }
+
+        &-text02 {
+            padding-bottom: 12px;
+        }
+
+        a {
+            color: v.$c-white;
+        }
+    }
+
+    &__details {
+        max-width: 360px;
+        margin: 0 auto;
+
+        @include m.mq(pc) {
+            max-width: 570px;
+        }
+    }
+
+    &__text {
+        color: v.$c-blue;
+        font-size: 17px;
+        border-top: 1px solid v.$c-blue;
+        border-bottom: 1px solid v.$c-blue;
+        text-align: center;
+        font-weight: 600;
+        padding-top: 6px;
+        padding-bottom: 3px;
+        letter-spacing: 1.8px;
+
+        @include m.mq(pc) {
+            font-size: 28px;
+            padding-top: 17px;
+            padding-bottom: 19px;
+        }
+    }
+
+    &__box-02 {
+        margin-top: 10px;
+        margin-bottom: 40px;
+        margin-left: 6px;
+
+        @include m.mq(pc) {
+            margin-top: 24px;
+            margin-bottom: 61px;
+        }
+    }
+
+    &__item {
+        font-size: 14px;
+
+        @include m.mq(pc) {
+            font-size: 22.86px;
+        }
+    }
+
+    &-small {
+        font-size: 11px;
+
+        @include m.mq(pc) {
+            font-size: 17.96px;
+        }
+    }
+}
+
+.right {
+    margin-left: 6.957%;
+}
+
+.bi-chevron-right {
+    color: v.$c-white;
+}
+
+.point {
+    background-color: v.$c-lightpink;
+    text-align: center;
+
+    &__inner-box {
+        max-width: 780px;
+        margin: 0 auto;
+    }
+
+    &-logo {
+        padding-top: 24px;
+        margin-bottom: 20px;
+
+        @include m.mq(pc) {
+            padding-top: 53px;
+        }
+    }
+
+    &--1 {
+        margin-bottom: 31px;
+    }
+
+    &--3 {
+        padding-bottom: 23px;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__title-02 {
+        font-size: 18px;
+        display: flex;
+        margin-top: 0.6%;
+        margin-left: 0.8%;
+
+        @include m.mq(pc) {
+            font-size: 18.07px;
+            margin-top: 0.5%;
+            margin-left: 0.8%;
+        }
+    }
+
+    &__title-03 {
+        letter-spacing: -10px;
+        margin-top: -4px;
+        }
+
+
+    &__box {
+        max-width: 350px;
+        margin: 0 auto;
+
+        @include m.mq(pc) {
+            max-width: 780px;
+        }
+    }
+
+    &__item {
+        font-size: 18px;
+        height: 45.92px;
         background-color: v.$c-pink;
         color: v.$c-white;
         border-radius: 10px 10px 0 0;
@@ -260,25 +610,396 @@
         justify-content: center;
     }
 
-    &__title-02 {
-        font-size: 21px;
-        background-color: v.$c-white;
+    &__inner {
+        padding: 12px 20px 16px 20px;
+        border: solid 1px v.$c-pink;
         border-radius: 0 0 10px 10px;
-        height: 63px;
+        line-height: 1.6;
+
+        @include m.mq(pc) {
+            padding: 32px 39px 43px 41px;
+        }
+
+        &-02 {
+            padding: 12px 15px 16px 15px;
+        }
+    }
+
+    &__description {
+        margin-bottom: 12px;
+        text-align: left;
+        font-size: 14px;
+        letter-spacing: -0.6px;
+
+        &-02 {
+            letter-spacing: 0.1px;
+            margin-left: 3px;
+            margin-bottom: 17px;
+        }
+
+        &-03 {
+            letter-spacing: 0;
+            margin-bottom: 0;
+        }
+
+        @include m.mq(pc) {
+            font-size: 21px;
+        }
+    }
+
+    &__example {
         display: flex;
-        align-items: baseline;
+        justify-content: space-between;
+        column-gap: 10px;
+        max-width: 310px;
+
+        @include m.mq(pc) {
+            max-width: 510px;
+            column-gap: 41px;
+            margin: 0 auto;
+        }
+    }
+
+    &--2 {
+        margin-bottom: 30px;
+    }
+}
+
+.frequency {
+    font-size: 14px;
+    margin-top: 3px;
+
+    @include m.mq(pc) {
+        font-size: 21px;
+    }
+}
+
+.right-name {
+    border: solid 1px v.$c-black;
+    background-color: v.$c-lightpink;
+    width: 143px;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+
+    @include m.mq(pc) {
+        font-size: 29.03px;
+        width: 230px;
+        height: 140px;
+    }
+}
+
+.plan {
+
+    &__name {
+        font-size: 23px;
+        margin-bottom: 25px;
+
+        &-02 {
+            margin-top: 42px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__part {
+        margin-top: 5px;
+        color: v.$c-pink;
+        font-size: 14px;
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px 12px;
+
+        @include m.mq(pc) {
+            display: flex;
+        }
+    }
+
+    &__item {
+        text-align: center;
+    }
+}
+
+.course {
+    max-width: 100%;
+    padding: 0 4.871% 0 5.384%;
+    margin: 0 auto;
+
+    @include m.mq(pc) {
+        max-width: 731px;
+        padding: 0;
+    }
+
+    &__title-front {
+        margin-bottom: 0;
+
+        @include m.mq(pc) {
+            margin-bottom: 31px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        align-items: center;
+
+        @include m.mq(pc) {
+            flex-direction: row;
+            column-gap: 15px;
+            margin-top: 50px;
+            margin-bottom: 61px;
+        }
+    }
+
+    &--body {
+        border: solid 1px v.$c-pink;
+        border-radius: 10px;
+        max-width: 350px;
+    }
+
+    &--facial {
+        border: solid 1px v.$c-pink;
+        border-radius: 10px;
+        max-width: 350px;
+    }
+
+    &__title-front {
+        font-size: 18px;
+    }
+
+    &__inner {
+        padding: 11px 20px 20px 20px;
+    }
+
+
+    &__title {
+        font-size: 17.8px;
+        background-color: v.$c-lightpink;
+        border-radius: 10px 10px 0 0;
+        color: v.$c-pink;
+        text-align: center;
+        height: 45px;
+        padding-top: 8px;
+        letter-spacing: 0.4px;
+    }
+
+    &__description {
+        margin-bottom: 10px;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 1.6;
+    }
+
+}
+
+.point__strong {
+    font-size: 32px;
+    color: v.$c-pink;
+    letter-spacing: 1.4px;
+}
+
+.title__box {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.voices {
+    background-color: v.$c-lightpink;
+    margin-bottom: 29px;
+
+    &-slick {
+        margin-top: 17px;
+        // padding-bottom: 54px;
+
+        @include m.mq(pc) {
+            margin-top: 28px;
+            // padding-bottom: 84px;
+        }
+
+    }
+
+    &__box {
+        overflow: visible;
+
+        @include m.mq(pc) {
+            max-width: 980px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            box-sizing: border-box;
+            width: 310px;
+        }
+
+        // &__item {
+        // width: 310px;
+        // margin-right: 5px;
+        // height: 188px;
+        // flex: 0 0 auto;
+        // box-sizing: border-box;
+        // padding: 0;
+        // overflow: visible;
+
+
+        &--right {
+            flex: 2;
+            // margin: 4.838% 4.838% 3.225% 4.838%;
+            margin: 3.838% 0% 0.225% 3.838%;
+        }
+    }
+
+    &__title {
+        color: v.$c-pink;
+        text-align: center;
+        font-size: 31.89px;
+        font-weight: bold;
+        padding-top: 24px;
+        letter-spacing: 2.2px;
+
+        @include m.mq(pc) {
+            padding-top: 53px;
+        }
+    }
+
+
+    &__content {
+        font-size: 18.01px;
+        height: 45.92px;
+        background-color: v.$c-pink;
+        color: v.$c-white;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        align-items: center;
         justify-content: center;
-        padding-top: 9px;
     }
 
-    &__strong {
-        font-size: 42px;
-        font-weight: 600;
-        line-height: 1;
+    &__inner {
+        // padding: 6.45% 3.125% 6.774% 3.225%;
+        padding: 0 3.525% 0 3.725%;
+        border: solid 1px v.$c-pink;
+        border-radius: 0 0 10px 10px;
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
     }
 
-    &__note {
-        color: v.$c-black;
-        font-size: 10px;
+    &__img {
+        flex: 1;
+        // margin: 4.516% 0 4.838% 0.838%;
+        margin: 4.516% 0 10px 3%;
+        height: auto;
+        width: 86px;
+    }
+
+    &__name {
+        font-size: 16px;
+        color: v.$c-pink;
+        white-space: nowrap;
+        margin-bottom: 3px;
+    }
+
+    &__text {
+        font-size: 14.01px;
+        line-height: 1.5;
+    }
+
+}
+
+.voices__box .slick-slide {
+    height: auto;
+    margin: 0 0.06%;
+    width: 310px;
+
+    @include m.mq(pc) {
+        margin: 0 0.5%;
+    }
+}
+
+
+.slick-dots {
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.slick-dot {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dot span {
+    display: block;
+    width: 3%;
+    height: 30px;
+    background-color: v.$c-lightpink;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.slick-active .slick-dot span {
+    background-color: v.$c-pink;
+}
+
+.custom-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 21px;
+    gap: 15px;
+    padding-bottom: 15px;
+}
+
+.custom-dots button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffd2d2;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-dots button.active {
+    background-color: v.$c-pink;  /* アクティブなドットの色 */
+    /* アクティブなドットの色 */
+}
+
+
+
+.slick-track {
+    display: flex;
+    align-items: stretch;
+}
+
+
+.footer {
+    background-color: v.$c-pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+
+    @include m.mq(pc) {
+        height: 122px;
+    }
+
+    &__logo {
+        text-align: center;
     }
 }
