@@ -43,3 +43,12 @@ $('.custom-dot').on('click', function () {
 $('.voices__box').on('afterChange', function (event, slick, currentSlide) {
   updateCustomDots(currentSlide);
 });
+
+
+$(function() {
+  $('.course__description-02').each(function() {
+    var html = $(this).html();
+    html = html.replace(/、/g, '<span class="break">、</span>');
+    $(this).html(html);
+  });
+});

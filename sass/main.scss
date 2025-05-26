@@ -8,15 +8,30 @@
 
     height: 60px;
 
+    @include m.mq(pc) {
+        margin-bottom: 0.8%;
+    }
+
     &__logo {
         margin-top: 11px;
         margin-left: 2%;
+
+        @include m.mq(pc) {
+            margin: 0;
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__inner {
         display: flex;
         justify-content: space-around;
         padding: 0;
+
+        @include m.mq(pc) {
+            justify-content: flex-start;
+            margin-top: 1.4%;
+        }
     }
 
     &__actions {
@@ -27,6 +42,15 @@
         justify-content: flex-end;
         max-width: 1030px;
         margin-top: 10px;
+
+        @include m.mq(pc) {
+            margin-top: 0;
+            margin-left: 40%;
+            gap: 4.2%;
+            font-size: 21.12px;
+            width: 100%;
+            justify-content: flex-start;
+        }
     }
 
     &__btn {
@@ -44,6 +68,8 @@
             font-size: v.$btn-head-font-pc;
             border-radius: v.$btn-head-radius-pc;
             font-size: v.$btn-head-font-pc;
+            align-items: center;
+            height: 50.36px;
         }
 
 
@@ -53,7 +79,8 @@
             padding: 6px 5px;
 
             @include m.mq(pc) {
-                width: 100%;
+                width: 233px;
+                padding: 2% 1.8% 2% 4.5%;
             }
 
             .bi-chevron-right {
@@ -68,18 +95,29 @@
 
             @include m.mq(pc) {
                 width: 100%;
+                padding: 3px 3px 4px 8px;
             }
         }
 
-        .bi-chevron-right {
-            margin-left: 8px;
-        }
     }
 }
 
+.bi-chevron-right {
+    margin-left: 8px;
+}
+
+.header__btn--reserve .bi-chevron-right {
+    @include m.mq(pc) {
+        margin-left: 0px;
+    }
+}
 
 .btn__free {
     font-size: 10px;
+
+    @include m.mq(pc) {
+        font-size: 18.87px;
+    }
 }
 
 .mv {
@@ -126,10 +164,21 @@
         flex-wrap: wrap;
         margin-top: 2px;
 
+        @include m.mq(pc) {
+            margin: 0;
+            width: 98%;
+            height: 37%;
+        }
+
         &-left {
             flex: 1;
             min-width: 180px;
             margin-top: 0.2%;
+
+            @include m.mq(pc) {
+                margin: 0;
+                line-height: 0.9;
+            }
         }
 
         &-right {
@@ -147,6 +196,9 @@
 
             @include m.mq(pc) {
                 max-width: 423.02px;
+                line-height: 1.2;
+                height: 98%;
+                margin-left: 0;
             }
 
         }
@@ -160,7 +212,8 @@
         line-height: 1.4;
 
         @include m.mq(pc) {
-            font-size: 4vw;
+            font-size: 8.2vw;
+            margin-top: -5%;
         }
     }
 
@@ -169,8 +222,10 @@
         padding-left: 18.6%;
 
         @include m.mq(pc) {
-            font-size: 1.5vw;
+            font-size: 2.5vw;
             text-align: end;
+            letter-spacing: 0.2px;
+            margin-right: 1.2%;
         }
     }
 
@@ -182,6 +237,8 @@
 
         @include m.mq(pc) {
             font-size: 1.8vw;
+            margin-right: 8.1%;
+            margin-top: -2px;
         }
     }
 
@@ -189,12 +246,22 @@
         margin-top: 5%;
         margin-right: 7%;
 
+        @include m.mq(pc) {
+            margin-right: 1.9%;
+            margin-top: 4%;
+        }
+
         &-list {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
             row-gap: 13px;
             text-align: center;
+
+            @include m.mq(pc) {
+                row-gap: 22px;
+            }
+
         }
 
         &-item {
@@ -209,7 +276,10 @@
             letter-spacing: 2.2px;
 
             @include m.mq(pc) {
-                font-size: 1.5vw;
+                font-size: 1.9vw;
+                height: 67px;
+                width: 43%;
+                letter-spacing: -0.4px;
             }
         }
     }
@@ -228,7 +298,10 @@
     left: 16%;
 
     @include m.mq(pc) {
-        font-size: 1vw;
+        font-size: 1.9vw;
+        padding: 2%;
+        top: 19%;
+        left: 13.7%;
     }
 }
 
@@ -237,7 +310,9 @@
     letter-spacing: 3.4px;
 
     @include m.mq(pc) {
-        font-size: 2vw;
+        font-size: 3.7vw;
+        letter-spacing: 0.7px;
+        margin-left: 3%;
     }
 }
 
@@ -246,7 +321,8 @@
     color: yellow;
 
     @include m.mq(pc) {
-        font-size: 5vw;
+        font-size: 11.3vw;
+        margin-left: 7%;
     }
 
     &-yen {
@@ -255,7 +331,7 @@
         letter-spacing: -1.2px;
 
         @include m.mq(pc) {
-            font-size: 2vw;
+            font-size: 5.7vw;
         }
     }
 }
@@ -264,7 +340,7 @@
     font-size: 2vw;
 
     @include m.mq(pc) {
-        font-size: 1vw;
+        font-size: 1.2vw;
     }
 }
 
@@ -278,6 +354,7 @@
     @include m.mq(pc) {
         padding-top: 50px;
         padding-bottom: 26px;
+        padding: 26px 4.871% 24px 6.384%;
     }
 
 
@@ -287,8 +364,9 @@
         height: 98px;
 
         @include m.mq(pc) {
-            margin-bottom: 21px;
+            margin-bottom: 14px;
             height: 148px;
+            width: 97%;
         }
     }
 
@@ -303,8 +381,9 @@
         justify-content: center;
 
         @include m.mq(pc) {
-            font-size: 32px;
-            height: 47px;
+            font-size: 31px;
+            height: 48px;
+            letter-spacing: 0.9px;
         }
     }
 
@@ -323,6 +402,11 @@
         @include m.mq(pc) {
             font-size: 43.67px;
             height: 98px;
+            letter-spacing: -0.1px;
+            margin-top: 0;
+            margin-left: 0;
+            padding-top: 10px;
+            padding-left: 2.5%;
         }
     }
 
@@ -342,6 +426,7 @@
 
         @include m.mq(pc) {
             font-size: 14px;
+            margin-left: -23px;
         }
     }
 }
@@ -358,9 +443,9 @@
     color: v.$c-pink;
 
     @include m.mq(pc) {
-        margin-bottom: 35px;
+        margin-bottom: 23px;
         font-size: 34px;
-        margin-top: 8px;
+        margin-top: 22px;
     }
 
     &::before,
@@ -401,18 +486,18 @@
         margin-bottom: 32px;
 
         @include m.mq(pc) {
-            margin-top: 63px;
+            margin-top: 49px;
             margin-bottom: 46px;
         }
     }
 
     &-02 {
-        margin-top: 31px;
+        margin-top: 24px;
         margin-bottom: 43px;
 
         @include m.mq(pc) {
-            margin-top: 62px;
-            margin-bottom: 62px;
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
     }
 
@@ -431,7 +516,13 @@
         margin: 0 0 3px 3%;
 
         @include m.mq(pc) {
-            margin-bottom: 21px;
+            margin-bottom: 10px;
+        }
+
+        &-02 {
+            @include m.mq(pc) {
+                margin-bottom: 11px;
+            }
         }
     }
 
@@ -445,6 +536,7 @@
         @include m.mq(pc) {
             height: 130.1px;
             max-width: 570px;
+            padding: 0;
         }
     }
 
@@ -464,8 +556,19 @@
         padding-left: 12%;
         letter-spacing: 2px;
 
+        @include m.mq(pc) {
+            height: 131px;
+            max-width: 570px;
+            letter-spacing: 3.8px;
+        }
+
         &-text01 {
             padding-top: 12px;
+
+            @include m.mq(pc) {
+                padding-left: 0;
+                padding-top: 0;
+            }
         }
 
         &-text02 {
@@ -476,6 +579,7 @@
             color: v.$c-white;
         }
     }
+
 
     &__details {
         max-width: 360px;
@@ -499,8 +603,8 @@
 
         @include m.mq(pc) {
             font-size: 28px;
-            padding-top: 17px;
-            padding-bottom: 19px;
+            padding-top: 6px;
+            padding-bottom: 8px;
         }
     }
 
@@ -510,8 +614,9 @@
         margin-left: 6px;
 
         @include m.mq(pc) {
-            margin-top: 24px;
-            margin-bottom: 61px;
+            margin-top: 14px;
+            margin-bottom: 54px;
+            margin-left: 0;
         }
     }
 
@@ -520,6 +625,7 @@
 
         @include m.mq(pc) {
             font-size: 22.86px;
+            letter-spacing: -0.2px;
         }
     }
 
@@ -532,8 +638,15 @@
     }
 }
 
+
+
 .right {
     margin-left: 6.957%;
+
+    @include m.mq(pc) {
+        margin-right: -2%;
+        margin-left: 5.5%;
+    }
 }
 
 .bi-chevron-right {
@@ -554,16 +667,33 @@
         margin-bottom: 20px;
 
         @include m.mq(pc) {
-            padding-top: 53px;
+            padding-top: 43px;
+            margin-bottom: 42px;
         }
     }
 
     &--1 {
         margin-bottom: 31px;
+
+        @include m.mq(pc) {
+            margin-bottom: 47px;
+        }
+    }
+
+    &--2 {
+        margin-bottom: 27px;
+
+        @include m.mq(pc) {
+            margin-bottom: 51px;
+        }
     }
 
     &--3 {
-        padding-bottom: 23px;
+        padding-bottom: 30px;
+
+        @include m.mq(pc) {
+            padding-bottom: 60px;
+        }
     }
 
     &__title {
@@ -587,7 +717,12 @@
     &__title-03 {
         letter-spacing: -10px;
         margin-top: -4px;
+
+        @include m.mq(pc) {
+            margin-top: 3px;
+            letter-spacing: 2.1px;
         }
+    }
 
 
     &__box {
@@ -608,6 +743,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include m.mq(pc) {
+            font-size: 28px;
+            height: 73px;
+        }
     }
 
     &__inner {
@@ -617,11 +757,24 @@
         line-height: 1.6;
 
         @include m.mq(pc) {
-            padding: 32px 39px 43px 41px;
+            padding: 27px 39px 35px 41px;
         }
 
         &-02 {
-            padding: 12px 15px 16px 15px;
+            padding: 12px 15px 16px 20px;
+
+            @include m.mq(pc) {
+                padding: 25px 1.5% 34px 5.2%;
+            }
+        }
+
+        &-03 {
+            padding: 14px 20px 14px 20px;
+            line-height: 1.6;
+
+            @include m.mq(pc) {
+                padding: 27px 39px 25px 41px;
+            }
         }
     }
 
@@ -631,20 +784,35 @@
         font-size: 14px;
         letter-spacing: -0.6px;
 
-        &-02 {
+        @include m.mq(pc) {
+            font-size: 21px;
             letter-spacing: 0.1px;
-            margin-left: 3px;
-            margin-bottom: 17px;
+            margin-bottom: 20px;
+            margin-right: 8px;
+        }
+
+        &-02 {
+            margin-bottom: 16px;
+            text-align: left;
+            font-size: 14px;
+            letter-spacing: 0;
+
+            @include m.mq(pc) {
+                letter-spacing: 0.1px;
+                margin-left: 3px;
+                margin-bottom: 17px;
+            }
         }
 
         &-03 {
             letter-spacing: 0;
             margin-bottom: 0;
+
+            @include m.mq(pc) {
+                margin-bottom: 0;
+            }
         }
 
-        @include m.mq(pc) {
-            font-size: 21px;
-        }
     }
 
     &__example {
@@ -659,11 +827,8 @@
             margin: 0 auto;
         }
     }
-
-    &--2 {
-        margin-bottom: 30px;
-    }
 }
+
 
 .frequency {
     font-size: 14px;
@@ -671,6 +836,7 @@
 
     @include m.mq(pc) {
         font-size: 21px;
+        margin-top: 7.6px;
     }
 }
 
@@ -685,8 +851,8 @@
     font-size: 19px;
 
     @include m.mq(pc) {
-        font-size: 29.03px;
-        width: 230px;
+        font-size: 29.43px;
+        width: 233px;
         height: 140px;
     }
 }
@@ -697,9 +863,18 @@
         font-size: 23px;
         margin-bottom: 25px;
 
+        @include m.mq(pc) {
+            margin-bottom: 19px;
+            margin-left: -28px;
+        }
+
         &-02 {
             margin-top: 42px;
             margin-bottom: 24px;
+
+            @include m.mq(pc) {
+                margin-top: 55px;
+            }
         }
     }
 
@@ -707,15 +882,21 @@
         margin-top: 5px;
         color: v.$c-pink;
         font-size: 14px;
+
+        @include m.mq(pc) {
+            margin-top: 2px;
+        }
     }
 
     &__inner {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 15px 12px;
+        gap: 18px 12px;
+        margin-left: -6px;
 
         @include m.mq(pc) {
             display: flex;
+            margin-left: 2.2%;
         }
     }
 
@@ -734,14 +915,6 @@
         padding: 0;
     }
 
-    &__title-front {
-        margin-bottom: 0;
-
-        @include m.mq(pc) {
-            margin-bottom: 31px;
-        }
-    }
-
     &__list {
         display: flex;
         flex-direction: column;
@@ -752,8 +925,8 @@
 
         @include m.mq(pc) {
             flex-direction: row;
-            column-gap: 15px;
-            margin-top: 50px;
+            column-gap: 32px;
+            margin-top: 36px;
             margin-bottom: 61px;
         }
     }
@@ -762,20 +935,41 @@
         border: solid 1px v.$c-pink;
         border-radius: 10px;
         max-width: 350px;
+        width: 100%;
     }
 
     &--facial {
         border: solid 1px v.$c-pink;
         border-radius: 10px;
         max-width: 350px;
+        width: 100%;
     }
 
     &__title-front {
         font-size: 18px;
+        margin-bottom: 0;
+
+        @include m.mq(pc) {
+            margin-bottom: 5px;
+            font-size: 23px;
+            letter-spacing: 1.3px;
+            margin-left: 7px;
+        }
     }
 
     &__inner {
         padding: 11px 20px 20px 20px;
+
+        @include m.mq(pc) {
+            padding: 11px 1.4% 20px 5.8%;
+
+        }
+
+        &-02 {
+            @include m.mq(pc) {
+                padding: 10px 1.2% 20px 5.8%;
+            }
+        }
     }
 
 
@@ -788,21 +982,70 @@
         height: 45px;
         padding-top: 8px;
         letter-spacing: 0.4px;
+
+        @include m.mq(pc) {
+            font-size: 27.8px;
+            height: 60px;
+        }
     }
+
+    &__title-big {
+        @include m.mq(pc) {
+            letter-spacing: 9.3px;
+        }
+    }
+
 
     &__description {
         margin-bottom: 10px;
         font-size: 14px;
         letter-spacing: 0;
         line-height: 1.6;
-    }
 
+        @include m.mq(pc) {
+            font-size: 17.3px;
+            line-height: 1.5;
+            margin-bottom: 14px;
+            letter-spacing: 0.8px;
+        }
+
+        &-02 {
+            margin-bottom: 10px;
+            letter-spacing: 0;
+            line-height: 1.6;
+
+            @include m.mq(pc) {
+                font-size: 17.3px;
+                line-height: 1.5;
+                margin-bottom: 14px;
+                letter-spacing: 0.8px;
+
+            }
+        }
+    }
 }
+
+
+.break {
+    display: inline;
+
+    @include m.mq(pc) {
+        .break::before {
+            content: "";
+            display: block;
+        }
+    }
+}
+
 
 .point__strong {
     font-size: 32px;
     color: v.$c-pink;
     letter-spacing: 1.4px;
+
+    @include m.mq(pc) {
+        font-size: 40px;
+    }
 }
 
 .title__box {
@@ -814,12 +1057,17 @@
     background-color: v.$c-lightpink;
     margin-bottom: 29px;
 
+    @include m.mq(pc) {
+        padding-bottom: 35px;
+        margin-bottom: 48px;
+    }
+
     &-slick {
         margin-top: 17px;
         // padding-bottom: 54px;
 
         @include m.mq(pc) {
-            margin-top: 28px;
+            margin-top: 32px;
             // padding-bottom: 84px;
         }
 
@@ -869,7 +1117,8 @@
         letter-spacing: 2.2px;
 
         @include m.mq(pc) {
-            padding-top: 53px;
+            padding-top: 30px;
+            font-size: 41.71px;
         }
     }
 
@@ -883,6 +1132,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include m.mq(pc) {
+            height: 46px;
+        }
     }
 
     &__inner {
@@ -976,7 +1229,8 @@
 }
 
 .custom-dots button.active {
-    background-color: v.$c-pink;  /* アクティブなドットの色 */
+    background-color: v.$c-pink;
+    /* アクティブなドットの色 */
     /* アクティブなドットの色 */
 }
 
