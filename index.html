@@ -54,8 +54,8 @@
       <section class="mv container-wide">
         <div class="mv__img">
           <picture>
-            <source media="(max-width: 767px)" srcset="./assets/image/mv_woman_sp_01.jpg" />
-            <img src="./assets/image/mv_woman_pc_01.jpg" alt="" />
+            <source media="(max-width: 767px)" srcset="./assets/image/mv_woman_sp_01.jpg">
+            <img src="./assets/image/mv_woman_pc_01.jpg" alt="">
           </picture>
           <div class="mv__inner">
             <div class="mv__first">
@@ -65,12 +65,12 @@
               </div>
               <div class="mv__first-right">
                 <div class="mv__first-right-inner">
-                  <div class="first-month">
-                    <p class="now">今だけ</p>
-                    <div class="free-box">
-                    <span class="first-month-letter">
-                      初月</span><span class="free-0">0</span><span class="free-0-yen">円</span>
-                    </div>
+                  <div class="mv__first-month">
+                    <span class="mv__now">今だけ</span>
+                    <span class="mv__first-month-letter">初月</span>
+                  </div>
+                  <div class="mv__first-right-text">
+                    <span class="free-0">0</span><span class="free-0-yen">円</span>
                   </div>
                 </div>
               </div>
@@ -92,7 +92,7 @@
 
       <div class="campaign container-wide">
         <div class="campaign__inner container-narrow">
-          <p class="campaign__highlight">今だけ！</p>
+          <p class="campaign__highlight">今だけ<span class="emphasis">!</span></p>
           <div class="campaign__box">
             <p class="campaign__title">フェイシャルコース</p>
             <p class="campaign__title-02"><span class="campaign__strong">3</span>回プレゼント！</p>
@@ -136,15 +136,19 @@
               <div class="point__title-02">が選ばれる</div>
             </div>
             <h2 class="point__title-03">
-              <picture>
-                <source class="point_star_sp" media="(max-width: 767px)" srcset="./assets/image/index_point_star_left_sp_01.png">
-                <img class="point_star_sp" src="./assets/image/index_point_star_left_pc_01.png" alt="">
-              </picture>
+              <span class="star-left">
+                <picture>
+                  <source class="point_star_sp" media="(max-width: 767px)" srcset="./assets/image/index_point_star_left_sp_01.png">
+                  <img class="point_star_sp" src="./assets/image/index_point_star_left_pc_01.png" alt="">
+                </picture>
+              </span>
               <span class="point__strong">3つのポイント</span>
-              <picture>
-                <source class="point_star_sp" media="(max-width: 767px)" srcset="./assets/image/index_point_star_right_sp_01.png">
-                <img class="point_star_sp" src="./assets/image/index_point_star_right_pc_01.png" alt="">
-              </picture>
+              <span class="star-right">
+                <picture>
+                  <source class="point_star_sp" media="(max-width: 767px)" srcset="./assets/image/index_point_star_right_sp_01.png">
+                  <img class="point_star_sp" src="./assets/image/index_point_star_right_pc_01.png" alt="">
+                </picture>
+              </span>
             </h2>
           </div>
 
@@ -281,15 +285,19 @@
         <div class="title__box">
           <p class="course__title-front">ほかにも選べる！</p>
           <h2 class="course__title-big">
-            <picture>
-              <source class="point_star_sp" media="(max-width: 767px)" srcset="./assets/image/index_point_star_left_sp_01.png">
-              <img class="point_star_sp" src="./assets/image/index_point_star_left_pc_01.png" alt="">
-            </picture>
+            <span class="star-left star-left-2">
+              <picture>
+                <source class="point_star_sp" media="(max-width: 767px)" srcset="./assets/image/index_point_star_left_sp_01.png">
+                <img class="point_star_sp" src="./assets/image/index_point_star_left_pc_01.png" alt="">
+              </picture>
+            </span>
             <span class="point__strong">2つのコース</span>
-            <picture>
-              <source class="point_star_sp" media="(max-width: 767px)" srcset="./assets/image/index_point_star_right_sp_01.png">
-              <img class="point_star_sp" src="./assets/image/index_point_star_right_pc_01.png" alt="">
-            </picture>
+            <span class="star-right star-right-2">
+              <picture>
+                <source class="point_star_sp" media="(max-width: 767px)" srcset="./assets/image/index_point_star_right_sp_01.png">
+                <img class="point_star_sp" src="./assets/image/index_point_star_right_pc_01.png" alt="">
+              </picture>
+            </span>
           </h2>
         </div>
 
@@ -324,15 +332,21 @@
 
       <section class="voices container-wide">
         <h2 class="voices__title">
-          <picture>
-            <source class="point_star_sp" media="(max-width: 767px)" srcset="./assets/image/index_point_star_left_sp_01.png">
-            <img class="point_star_sp" src="./assets/image/index_point_star_left_pc_01.png" alt="">
-          </picture>
+          <span class="star-left star-left-3">
+            <picture>
+              <source class="point_star_sp" media="(max-width: 767px)" srcset="./assets/image/index_point_star_left_sp_01.png">
+              <img class="point_star_sp" src="./assets/image/index_point_star_left_pc_01.png" alt="">
+            </picture>
+          </span>
+          <span class="voices__strong">
           お客様の声
-          <picture>
-            <source class="point_star_sp" media="(max-width: 767px)" srcset="./assets/image/index_point_star_right_sp_01.png">
-            <img class="point_star_sp" src="./assets/image/index_point_star_right_pc_01.png" alt="">
-          </picture>
+          </span>
+          <span class="star-right star-right-3">
+            <picture>
+              <source class="point_star_sp" media="(max-width: 767px)" srcset="./assets/image/index_point_star_right_sp_01.png">
+              <img class="point_star_sp" src="./assets/image/index_point_star_right_pc_01.png" alt="">
+            </picture>
+          </span>
         </h2>
 
         <!-- カルーセル -->
