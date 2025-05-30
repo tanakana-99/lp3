@@ -225,7 +225,7 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 0 0 0 2.5%;
+  padding: 0 0 0 1.7%;
 }
 @media screen and (min-width: 768px) {
   .mv__inner {
@@ -234,10 +234,9 @@ li {
 }
 .mv__first {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  margin-top: 2px;
 }
 @media screen and (min-width: 768px) {
   .mv__first {
@@ -247,7 +246,7 @@ li {
   }
 }
 .mv__first-left {
-  flex: 1;
+  flex: 38%;
   min-width: 180px;
   display: flex;
   flex-direction: column;
@@ -255,96 +254,86 @@ li {
 }
 @media screen and (min-width: 768px) {
   .mv__first-left {
-    margin: 0;
-    line-height: 1.1;
-    margin-left: 3.4%;
-    margin-top: 0.8%;
-    max-width: 500px;
+    line-height: 0.9;
+    margin-left: 2.1%;
+    flex: 41%;
+    padding: 3.1% 0;
   }
 }
 .mv__first-right {
-  flex: 1;
-  min-width: 150px;
+  flex: 36%;
   background-color: rgba(255, 255, 255, 0.3);
-  padding: 0;
   text-align: center;
   font-weight: bold;
   position: relative;
-  max-width: 100%;
-  line-height: 0;
   letter-spacing: 3.5px;
-  height: auto;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding-bottom: 9.5%;
-  padding-top: 7%;
+  line-height: 1.2;
+  padding: 4.2% 0 4.6% 0;
 }
 @media screen and (min-width: 768px) {
   .mv__first-right {
-    max-height: 100%;
-    min-width: 180px;
-    line-height: 1.8;
-    margin-left: 0;
-    max-width: 423px;
-    padding-bottom: 6.5%;
-    padding-top: 0;
+    padding: 1.7% 0 4.8% 0;
+    flex: 28%;
   }
 }
 .mv__first-right-inner {
-  max-height: 105px;
+  padding-left: 5%;
   display: flex;
-  padding-left: 14%;
-  column-gap: 4%;
-  align-items: flex-end;
+  column-gap: 7%;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .mv__first-right-inner {
-    max-height: 160px;
-    align-items: center;
-    padding-left: 14%;
-    column-gap: 7%;
-    padding-top: 7%;
+    column-gap: 6%;
+    padding-left: 0;
   }
+}
+.mv__first-right-text {
+  line-height: 1;
 }
 .mv__first-month {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
-  row-gap: 18.5px;
-  margin-bottom: 6px;
+  row-gap: 5px;
 }
 @media screen and (min-width: 768px) {
   .mv__first-month {
-    row-gap: 0;
-    margin-bottom: 0;
-    margin-top: 10%;
-    margin-left: 3px;
+    row-gap: 18px;
+    margin-top: 25px;
   }
 }
 .mv__now {
-  font-size: clamp(10px, 1.7vw, 13px);
+  font-size: clamp(13px, 1.7vw, 13px);
+  padding: 4px 3px 7px 4px;
   display: block;
   font-weight: bold;
   background-color: #fff;
   color: #fa7da3;
-  padding: 20% 0%;
-  letter-spacing: 3px;
+  letter-spacing: 0;
 }
 @media screen and (min-width: 768px) {
   .mv__now {
     font-size: 1.9vw;
-    padding: 0;
     letter-spacing: 1.5px;
+    padding: 7px 8px 11px 12px;
   }
 }
 .mv__first-month-letter {
   font-size: clamp(22px, 5vw, 24px);
+  letter-spacing: 0;
 }
 @media screen and (min-width: 768px) {
   .mv__first-month-letter {
     font-size: clamp(40px, 3.4vw, 54px);
-    letter-spacing: 4px;
+    letter-spacing: 2.4px;
     white-space: normal;
+    margin-left: 10px;
   }
 }
 .mv__title {
@@ -372,7 +361,7 @@ li {
     font-size: 2.6vw;
     text-align: end;
     letter-spacing: -1.3px;
-    margin-right: -4%;
+    margin-right: 2%;
   }
 }
 .mv__second {
@@ -389,7 +378,7 @@ li {
   }
 }
 .mv__third {
-  margin-top: 6%;
+  margin-top: 5%;
   margin-right: 7%;
 }
 @media screen and (min-width: 768px) {
@@ -414,12 +403,13 @@ li {
 .mv__third-item {
   border: 1px solid white;
   font-size: 18px;
-  width: 38%;
+  width: 37%;
   height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   letter-spacing: 0;
+  font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   .mv__third-item {
@@ -468,13 +458,6 @@ li {
   }
   .free-0-yen {
     font-size: clamp(30px, 4vw, 55px);
-  }
-  .mv__first-right {
-    min-width: 180px;
-    max-width: 225px;
-  }
-  .mv__first-right-inner {
-    padding: 0;
   }
   .mv__first {
     flex-wrap: wrap;
@@ -916,6 +899,7 @@ li {
   border: solid 1px #fa7da3;
   border-radius: 0 0 10px 10px;
   line-height: 1.6;
+  background-color: #fff;
 }
 @media screen and (min-width: 768px) {
   .point__inner {
@@ -1084,6 +1068,7 @@ li {
     font-size: 29.43px;
     width: 233px;
     height: 140px;
+    background-color: #fff;
   }
 }
 
