@@ -3,7 +3,7 @@
     "format": "expanded",
     "extensionName": ".css",
     "savePath": "assets/style",
-    "sourceMap": false
+    "sourceMap": false,
   }],
   "liveSassCompile.settings.rootIsWorkspace": true,
   "liveSassCompile.settings.generateMap": false,
